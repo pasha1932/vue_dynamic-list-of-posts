@@ -55,7 +55,7 @@ export default {
     handleDeletePost(postId) {
       deletePost(postId)
         .then(() => (this.posts = this.posts.filter((post) => post.id !== postId)))
-        .catch(() => (this.errorMessage = 'Unable to delete todo'))
+        .catch(() => (this.errorMessage = 'Unable to delete post'))
         .finally(() => (this.currentPost = null))
     },
 
@@ -71,7 +71,7 @@ export default {
           this.editedPost = null
           this.currentPost = data
         })
-        .catch(() => (this.errorMessage = 'Unable to edit todo'))
+        .catch(() => (this.errorMessage = 'Unable to edit post'))
     },
 
     handleAddPost(post) {

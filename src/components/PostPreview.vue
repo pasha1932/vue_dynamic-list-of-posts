@@ -15,7 +15,7 @@ export default {
 <template>
   <div class="tile is-parent is-8-desktop Sidebar" :class="{ 'Sidebar--open': post }">
     <div class="tile is-child box is-success">
-      <div className="content">
+      <div class="content">
         <div class="block">
           <div class="is-flex is-justify-content-space-between is-align-items-center">
             <h2>#{{ post.id }}: {{ post.title }}</h2>

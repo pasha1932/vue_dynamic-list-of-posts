@@ -72,27 +72,27 @@ export default {
 <template>
   <Loader v-if="isLoading" />
   <div class="block">
-    <div v-if="comments.length === 0 && !isLoading" className="block">
-      <p className="title is-4">No comments yet</p>
+    <div v-if="comments.length === 0 && !isLoading" class="block">
+      <p class="title is-4">No comments yet</p>
     </div>
     <template v-if="comments.length > 0 && !isWritingComment && !isLoading">
-      <article v-for="comment in comments" :key="comment.id" className="message is-small">
-        <div className="message-header">
+      <article v-for="comment in comments" :key="comment.id" class="message is-small">
+        <div class="message-header">
           <a :href="`mailto:${comment.email}`"> {{ comment.name }} </a>
           <button
             type="button"
-            className="delete is-small"
+            class="delete is-small"
             aria-label="delete"
             @click="deleteComment(comment.id)"
           ></button>
         </div>
-        <div className="message-body">{{ comment.body }}</div>
+        <div class="message-body">{{ comment.body }}</div>
       </article>
     </template>
     <button
       v-if="!isWritingComment"
       type="button"
-      className="button is-link"
+      class="button is-link"
       @click="isWritingComment = true"
     >
       Write a comment

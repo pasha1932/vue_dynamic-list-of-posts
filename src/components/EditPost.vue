@@ -46,14 +46,14 @@ export default {
 <template>
   <div class="tile is-parent is-8-desktop Sidebar" :class="{ 'Sidebar--open': post }">
     <div class="tile is-child box is-success">
-      <div className="content">
-        <div className="content">
+      <div class="content">
+        <div class="content">
           <h2>Editing post</h2>
 
           <form @submit.prevent="handleSubmit">
-            <div className="field" data-cy="NameField">
-              <label className="label" htmlFor="{`comment-author-name-${name}`}"> Title </label>
-              <div className="control has-icons-left has-icons-right">
+            <div class="field" data-cy="NameField">
+              <label class="label" for="{`comment-author-name-${name}`}"> Title </label>
+              <div class="control has-icons-left has-icons-right">
                 <input
                   type="text"
                   name="{name}"
@@ -64,26 +64,26 @@ export default {
                   v-model="title"
                   @input="errorTitle = false"
                 />
-                <span className="icon is-small is-left">
-                  <i className="fas fa-user"></i>
+                <span class="icon is-small is-left">
+                  <i class="fas fa-user"></i>
                 </span>
 
                 <span
-                  className="icon is-small is-right has-text-danger"
+                  class="icon is-small is-right has-text-danger"
                   v-if="errorTitle"
                   data-cy="ErrorIcon"
                 >
-                  <i className="fas fa-exclamation-triangle"></i>
+                  <i class="fas fa-exclamation-triangle"></i>
                 </span>
               </div>
 
-              <p className="help is-danger" v-if="errorTitle" data-cy="ErrorMessage">
+              <p class="help is-danger" v-if="errorTitle" data-cy="ErrorMessage">
                 Title is required
               </p>
             </div>
-            <div className="field" data-cy="BodyField">
-              <label className="label" htmlFor="{`comment-${name}`}"> Write post body </label>
-              <div className="control">
+            <div class="field" data-cy="BodyField">
+              <label class="label" for="{`comment-${name}`}"> Write post body </label>
+              <div class="control">
                 <textarea
                   id="{`comment-${name}`}"
                   name="name"
@@ -95,19 +95,15 @@ export default {
                 ></textarea>
               </div>
 
-              <p className="help is-danger" v-if="errorBody" data-cy="ErrorMessage">
-                Body is required
-              </p>
+              <p class="help is-danger" v-if="errorBody" data-cy="ErrorMessage">Body is required</p>
             </div>
 
-            <div className="field is-grouped">
-              <div className="control">
-                <button type="submit" className="button is-link">Save</button>
+            <div class="field is-grouped">
+              <div class="control">
+                <button type="submit" class="button is-link">Save</button>
               </div>
-              <div className="control">
-                <button type="reset" className="button is-link is-light" @click="close">
-                  Cancel
-                </button>
+              <div class="control">
+                <button type="reset" class="button is-link is-light" @click="close">Cancel</button>
               </div>
             </div>
           </form>
